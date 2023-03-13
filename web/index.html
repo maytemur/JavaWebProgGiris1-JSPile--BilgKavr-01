@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!--Services altında JavaDb Server'ı çalıştırmadan önce start etmemiz gerekiyor. Tomcat'i kendi başlatıyor!-->
+<!--Services altında javaDb'yi apache sitesinden yükledim. Yükleme işlemi için ilgili dosyayı nebeans bin
+klasörüne atıyorsun işlem basit internetten bakılabilir. Daha sonra Project altından Libraries kısmında
+yine JavaDb yi eklememiz gerekiyorki JSP ile database bağlanabilelim.-->
+<!--JAVADB Derby sql komutlarında string ifadeleri tek tırnak içinde kabul ediyor çift tırnak hata verir dikkat!!!!!-->
+<!--Bunu add library değil add jar file-folder altından yapıyoruz.Derby klasöründeki ilgili jar dosyalarını
+ekliyoruz aynı mysql için connector klasörü altındaki mysql jar dosyası gibi-->
+<!--Database için table oluştururken karakter alanlarını varchar seçiyoruz. varchar kaç karakter girilmişse o kadar hafızada
+yer kaplıyor ama char örneğin 20 karakter denilmişse kullanıcı 2 karakterde girse hafızada geri kalanı boşluk olarak
+dolduruyor-->
+<!--sürekli veritabanına bağlanma şifre vs işlemlerini yapmak güzel bir kodlama değildir. Bunun için bir ara abstraction katmanı
+kullanıyoruzki alttaki database tipi vs değiştiğinde sürekli kodları değiştirmek zorunda kalmayalım -->
+<html>
+    <head>
+        <title>Bilg Kavramlari JSP 01 Java Server Pages</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Bilg Kavramlari JSP 01 Java Server Pages</div>
+
+        <form action="cevap.jsp" method="POST"><br>   
+            Lütfen isminizi giriniz:
+            <input type="text" name="isim" value="" /><br>
+            Şifrenizi giriniz:
+            <input type='password' name='sifre' value=""/> <br>
+            <input type="submit" value="Gönder" />
+        </form>
+    </body>
+</html>
